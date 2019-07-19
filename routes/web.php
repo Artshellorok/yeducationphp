@@ -14,6 +14,5 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
-$router->get('eshkere', function() use ($router) {
-    return 'eshkere'; 
-});
+$router->get('sms','SmsController@create');
+$router->get('sms/confirm','SmsController@confirm');
