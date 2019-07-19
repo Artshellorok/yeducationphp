@@ -4,8 +4,50 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e2be9f09bdae321109ae70f0128e96d5",
+    "content-hash": "141bc8cd1a68d091b44cff3fb72c38bc",
     "packages": [
+        {
+            "name": "cooperav/sms-aero-v2-laravel",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CooperAV/sms-aero-v2-laravel.git",
+                "reference": "e111859c8fa2b97e31e28bab7817fcfd46bf00d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CooperAV/sms-aero-v2-laravel/zipball/e111859c8fa2b97e31e28bab7817fcfd46bf00d4",
+                "reference": "e111859c8fa2b97e31e28bab7817fcfd46bf00d4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CooperAV\\SmsAero\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander",
+                    "email": "cooperav@ukr.net",
+                    "homepage": "https://github.com/CooperAV/SmsAero-v2-laravel",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Package for using service messages in Laravel-5",
+            "keywords": [
+                "laravel",
+                "sms-aero"
+            ],
+            "time": "2019-01-17T10:48:14+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
