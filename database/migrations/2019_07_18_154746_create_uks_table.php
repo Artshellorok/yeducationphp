@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSmsTable extends Migration
+class CreateUksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class CreateSmsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sms', function (Blueprint $table) {
-            $table->string('ticket')->primary();
-            $table->integer('code');
-            $table->boolean('confirmed')->default(0);
-            $table->string('phone');
-            $table->timestamps();
+        Schema::create('uks', function (Blueprint $table) {
+            $table->bigIncrements('id');
         });
     }
 
@@ -29,6 +25,6 @@ class CreateSmsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sms');
+        Schema::dropIfExists('uks');
     }
 }
