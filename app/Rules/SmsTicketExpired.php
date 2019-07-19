@@ -20,7 +20,7 @@ class SmsTicketExpired implements Rule
     public function passes($attribute, $value)
     {
         if (Sms::where('ticket', '=', $value)->exists()) {
-            $sms = Sms::where('ticket','=', $value);
+            $sms = Sms::where('ticket','=', $value)->first();
             $now = Carbon::now();
             $difference = $sms->created_at->diffInSeconds($now);
 

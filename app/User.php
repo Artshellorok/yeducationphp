@@ -12,25 +12,15 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
 {
     use Authenticatable, Authorizable;
     public $timestamps = false;
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'password', 'name', 'avatar'
-    ];
-    protected $guarded =[
-        'status', 'mail', 'phone', 'address', 'id'
-    ];
 
-    /**
-     * The attributes excluded from the model's JSON form.
-     *
-     * @var array
-     */
+    protected $fillable = ["name", "mail", "avatar","phone"];
     
     protected $hidden = [
         'password', 'address'
     ];
+
+    public function addresses()
+    {
+        return $this->belongsToMany('App\Address');
+    }
 }

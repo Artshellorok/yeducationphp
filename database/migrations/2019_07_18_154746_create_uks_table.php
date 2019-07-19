@@ -15,6 +15,7 @@ class CreateUksTable extends Migration
     {
         Schema::create('uks', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
         });
     }
 

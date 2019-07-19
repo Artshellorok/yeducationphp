@@ -15,16 +15,20 @@ class ComposerStaticInitaa420244f2dffbf0731f6f86142679e5
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
-        '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'bee9632da3ca00a99623b9c35d0c4f8b' => __DIR__ . '/..' . '/laravel/lumen-framework/src/helpers.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
+        ),
+        'm' => 
+        array (
+            'mmghv\\LumenRouteBinding\\' => 24,
         ),
         'X' => 
         array (
@@ -142,6 +146,10 @@ class ComposerStaticInitaa420244f2dffbf0731f6f86142679e5
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'mmghv\\LumenRouteBinding\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mmghv/lumen-route-binding/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -427,12 +435,17 @@ class ComposerStaticInitaa420244f2dffbf0731f6f86142679e5
     );
 
     public static $classMap = array (
+        'App\\Address' => __DIR__ . '/../..' . '/app/Address.php',
+        'App\\City' => __DIR__ . '/../..' . '/app/City.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Cryptography\\Random' => __DIR__ . '/../..' . '/app/Cryptography/Random.php',
         'App\\Events\\Event' => __DIR__ . '/../..' . '/app/Events/Event.php',
         'App\\Events\\ExampleEvent' => __DIR__ . '/../..' . '/app/Events/ExampleEvent.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AddressesController' => __DIR__ . '/../..' . '/app/Http/Controllers/AddressesController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-        'App\\Http\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Http/Controllers/ExampleController.php',
+        'App\\Http\\Controllers\\SmsController' => __DIR__ . '/../..' . '/app/Http/Controllers/SmsController.php',
+        'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\ExampleMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/ExampleMiddleware.php',
         'App\\Jobs\\ExampleJob' => __DIR__ . '/../..' . '/app/Jobs/ExampleJob.php',
@@ -441,6 +454,11 @@ class ComposerStaticInitaa420244f2dffbf0731f6f86142679e5
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
+        'App\\Rules\\PhoneOccupied' => __DIR__ . '/../..' . '/app/Rules/PhoneOccupied.php',
+        'App\\Rules\\SmsTicketExpired' => __DIR__ . '/../..' . '/app/Rules/SmsTicketExpired.php',
+        'App\\Rules\\TicketValid' => __DIR__ . '/../..' . '/app/Rules/TicketValid.php',
+        'App\\Sms' => __DIR__ . '/../..' . '/app/Sms.php',
+        'App\\Uk' => __DIR__ . '/../..' . '/app/Uk.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonImmutable' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonImmutable.php',
@@ -3544,6 +3562,10 @@ class ComposerStaticInitaa420244f2dffbf0731f6f86142679e5
         'TheSeer\\Tokenizer\\XMLSerializer' => __DIR__ . '/..' . '/theseer/tokenizer/src/XMLSerializer.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+        'mmghv\\LumenRouteBinding\\BindingResolver' => __DIR__ . '/..' . '/mmghv/lumen-route-binding/src/BindingResolver.php',
+        'mmghv\\LumenRouteBinding\\DingoServiceProvider' => __DIR__ . '/..' . '/mmghv/lumen-route-binding/src/DingoServiceProvider.php',
+        'mmghv\\LumenRouteBinding\\FastRouteDispatcher' => __DIR__ . '/..' . '/mmghv/lumen-route-binding/src/FastRouteDispatcher.php',
+        'mmghv\\LumenRouteBinding\\RouteBindingServiceProvider' => __DIR__ . '/..' . '/mmghv/lumen-route-binding/src/RouteBindingServiceProvider.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',

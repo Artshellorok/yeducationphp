@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Sms;
 use App\User;
-use Carbon\Carbon;
+
 use App\Cryptography\Random;
 use Illuminate\Http\Request;
 
@@ -18,7 +18,7 @@ class SmsController extends Controller {
     public function create(Random $random, Request $request)
     {
         $this->validate($request,[
-            'phone' => ['required', 'regex:/(8)[0-9]{9}/', new PhoneOccupied]
+            'phone' => ['required', 'regex:/(8)[0-9]{10}/', new PhoneOccupied]
         ]);
         Sms::create([
             "ticket" => $ticket = $random->gen_rand()->secure_hash()->get(),
@@ -27,17 +27,17 @@ class SmsController extends Controller {
         ]);
         return $ticket;
     }
-    public function confirm(Random $random, Request $request)
+    public function confirm(Request $request)
     {
         $this->validate($request,[
-            'ticket' => ['required', 'mimetypes:text/plain', new SmsTicketExpired],
+            'ticket' => ['required', new SmsTicketExpired],
             'code' => ['required', 'numeric']
         ]);
-        $sms = Sms::where('ticket', '=', $request->ticket);
+        $sms = Sms::where('ticket', '=', $request->ticket)->first();
 
         if ($sms->code == $request->code) {
-            $sms->confirm = true;
-            $sms->persist();
+            $sms->confirmed = true;
+            $sms->save();
             return 1;
         } else {
             return 0;

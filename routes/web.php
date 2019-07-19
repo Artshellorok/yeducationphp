@@ -11,8 +11,14 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+$router->get('/sms','SmsController@create');
+
+$router->get('/sms/confirm','SmsController@confirm');
+
+$router->get('/reg', 'UserController@create');
+
+$router->get('/cities', function () {
+    return \App\City::all()->toArray();
 });
-$router->get('sms','SmsController@create');
-$router->get('sms/confirm','SmsController@confirm');
+
+$router->get('/address/{city}', 'AddressesController@index');
